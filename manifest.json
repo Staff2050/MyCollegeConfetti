@@ -1,7 +1,7 @@
 {
-  "name": "CollegeConfetti",
+  "name": "MyCollegeConfetti",
   "description": "Admission Letter Stress Be Gone!",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "icons": {
     "128": "128.png",
     "48": "48.png"
