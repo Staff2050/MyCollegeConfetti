@@ -84,11 +84,11 @@ function startTheConfetti() {
             ctx.lineTo(this.x + this.tilt, this.y + this.tilt + (this.r / 4));
             
             ctx.fillStyle = "#003300";
-            ctx.font = '20px san-serif';
+            ctx.font = '80px san-serif';
             var textString = "ACCEPTED!", // collegename.toUpperCase()
                 textWidth = ctx.measureText(textString).width;
 
-            ctx.fillText(textString, (W / 2) - (H / 2), 100);
+            ctx.fillText(textString, (W / 2), (H / 2)); // used to be 100 as last
             return ctx.stroke();
         }
     }
@@ -326,10 +326,10 @@ function deniedRoutine() {
     // $(".confetti-canvas").appendTo('head');
     startTheDenial();
     ctx.fillStyle = "#330000";
-    ctx.font = '20px san-serif';
-    var textString = decisionn, // collegename.toUpperCase()
+    ctx.font = '80px san-serif';
+    var textString = 'TEST', // collegename.toUpperCase()
         textWidth = ctx.measureText(textString).width;
-    ctx.fillText(textString, (W / 2) - (H / 2), 100);
+    ctx.fillText(textString, (W / 2), (H / 2)); // last one was 100
     accepted = true;
 }
 
