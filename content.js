@@ -301,7 +301,7 @@ function startTheDenial() {
         ctx.font = '100px san-serif';
         var textString = decisionn, // collegename.toUpperCase()
             textWidth = ctx.measureText(textString).width;
-        ctx.fillText(textString, (W / 100), (H / 2)); // last one was 100
+        ctx.fillText(textString, (W / 6), (H / 2)); // last one was 100
     }
 
     function RandomFromTo(from, to) {
@@ -370,7 +370,7 @@ function checkAccept() {
         }
         else if ($("*:contains('defer')").length > 0 || $("*:contains('Defer')").length > 0) {
             console.log("default deferred detected: There's still a chance!");
-            decisionn = "Deferred, there's still a chance!";
+            decisionn = "Deferred\nThere's still a chance!";
             deniedRoutine();
         }
         // console.log($('iframe')[0]);
@@ -397,7 +397,7 @@ function checkAccept() {
                         ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('defer') > -1)
                 ) {
                     console.log("iframe deferred detected: There's still a chance!");
-                    decisionn = "Deferred, there's still a chance!";
+                    decisionn = "Deferred\nThere's still a chance!";
                     decisionnColor = "#FF7300";
                     deniedRoutine();
                 }
