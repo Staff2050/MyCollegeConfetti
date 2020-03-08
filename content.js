@@ -275,7 +275,6 @@ function startTheDenial() {
 
     $(document).ready(function () {
         SetGlobals();
-        InitializeButton();
 
         $(window).resize(function () {
             W = window.innerWidth;
