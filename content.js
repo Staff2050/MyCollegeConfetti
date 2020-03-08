@@ -366,11 +366,13 @@ function checkAccept() {
         else if ($("*:contains('regret')").length > 0 || $("*:contains('denied')").length > 0 || $("*:contains('Denied')").length > 0 || $("*:contains('rejected')").length > 0 || $("*:contains('Rejected')").length > 0) {
             console.log('default denied detected: Aww :(');
             decisionn = "Denied\nIt's ok though!";
+            decisionnColor = "#FF0000";
             deniedRoutine();
         }
         else if ($("*:contains('defer')").length > 0 || $("*:contains('Defer')").length > 0) {
             console.log("default deferred detected: There's still a chance!");
             decisionn = "Deferred\nThere's still a chance!";
+            decisionnColor = "#FF7300";
             deniedRoutine();
         }
         // console.log($('iframe')[0]);
