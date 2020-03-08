@@ -29,6 +29,7 @@ function rootDomain(url) {
 let collegename = rootDomain(window.location.hostname);
 console.log(collegename);
 let decisionn = '';
+let decisionnColor = "";
 
 function startTheConfetti() {
     // globals
@@ -296,11 +297,11 @@ function startTheDenial() {
     }
     
     function DrawMyText() {
-        ctx.fillStyle = "#FF0000";
+        ctx.fillStyle = decisionnColor;
         ctx.font = '100px san-serif';
         var textString = decisionn, // collegename.toUpperCase()
             textWidth = ctx.measureText(textString).width;
-        ctx.fillText(textString, (W / 6) - 1000, (H / 2)); // last one was 100
+        ctx.fillText(textString, (W / 100), (H / 2)); // last one was 100
     }
 
     function RandomFromTo(from, to) {
@@ -388,6 +389,7 @@ function checkAccept() {
                 ) {
                     console.log('iframe denied detected: Aww :(');
                     decisionn = "Denied, it's ok though!";
+                    decisionnColor = "#FF0000";
                     deniedRoutine();
                 }
                 else if (
@@ -396,6 +398,7 @@ function checkAccept() {
                 ) {
                     console.log("iframe deferred detected: There's still a chance!");
                     decisionn = "Deferred, there's still a chance!";
+                    decisionnColor = "#FF7300";
                     deniedRoutine();
                 }
             }
