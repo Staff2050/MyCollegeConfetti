@@ -380,14 +380,14 @@ function checkAccept() {
             if ($('iframe')[0] != null) {
                 if (
                     (
-                        ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('Congratulation') > -1 || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('congratulation') > -1)
+                        ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('Congratulation') > -1 || ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('congratulation') > -1)
                 ) {
                     console.log('iframe accept detected: Woot woot!');
                     acceptRoutine();
                 }
                 else if (
                     (
-                        ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('defer') > -1)
+                        ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('defer') > -1 || ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('Defer') > -1)
                 ) {
                     console.log("iframe deferred detected: There's still a chance!");
                     decisionn = "Deferred, Still a chance!";
@@ -396,7 +396,7 @@ function checkAccept() {
                 }
                 else if (
                     (
-                        ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('regret') > -1)
+                        ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('regret') > -1 || ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('Denied') > -1)
                 ) {
                     console.log('iframe denied detected: Aww :(');
                     decisionn = "Denied, It's ok though!";
