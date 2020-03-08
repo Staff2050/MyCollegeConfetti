@@ -84,7 +84,7 @@ function startTheConfetti() {
             ctx.lineTo(this.x + this.tilt, this.y + this.tilt + (this.r / 4));
             
             ctx.fillStyle = "#003300";
-            ctx.font = '80px san-serif';
+            ctx.font = '160px san-serif';
             var textString = "ACCEPTED!", // collegename.toUpperCase()
                 textWidth = ctx.measureText(textString).width;
 
@@ -272,9 +272,10 @@ function startTheDenial() {
     var deactivationTimerHandler;
     var reactivationTimerHandler;
     var animationHandler;
-
+    
     $(document).ready(function () {
         SetGlobals();
+        DrawMyText();
 
         $(window).resize(function () {
             W = window.innerWidth;
@@ -292,6 +293,14 @@ function startTheDenial() {
         H = window.innerHeight;
         canvas.width = W;
         canvas.height = H * heightMultiplier;
+    }
+    
+    function DrawMyText() {
+        ctx.fillStyle = "#330000";
+        ctx.font = '160px san-serif';
+        var textString = 'TEST', // collegename.toUpperCase()
+            textWidth = ctx.measureText(textString).width;
+        ctx.fillText(textString, (W / 2.15), (H / 2)); // last one was 100
     }
 
     function RandomFromTo(from, to) {
@@ -324,11 +333,6 @@ function acceptRoutine() {
 function deniedRoutine() {
     // $(".confetti-canvas").appendTo('head');
     startTheDenial();
-    ctx.fillStyle = "#330000";
-    ctx.font = '80px san-serif';
-    var textString = 'TEST', // collegename.toUpperCase()
-        textWidth = ctx.measureText(textString).width;
-    ctx.fillText(textString, (W / 2), (H / 2)); // last one was 100
     accepted = true;
 }
 
