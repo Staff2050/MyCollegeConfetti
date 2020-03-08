@@ -89,7 +89,7 @@ function startTheConfetti() {
             var textString = "ACCEPTED!", // collegename.toUpperCase()
                 textWidth = ctx.measureText(textString).width;
 
-            ctx.fillText(textString, (W / 2.9), (H / 2)); // used to be 100 as last
+            ctx.fillText(textString, (W / 2.8), (H / 2)); // used to be 100 as last
             return ctx.stroke();
         }
     }
@@ -301,7 +301,7 @@ function startTheDenial() {
         ctx.font = '100px san-serif';
         var textString = decisionn, // collegename.toUpperCase()
             textWidth = ctx.measureText(textString).width;
-        ctx.fillText(textString, (W / 6), (H / 2)); // last one was 100
+        ctx.fillText(textString, (W / 4), (H / 2)); // last one was 100
     }
 
     function RandomFromTo(from, to) {
@@ -365,13 +365,13 @@ function checkAccept() {
         }
         else if ($("*:contains('regret')").length > 0 || $("*:contains('denied')").length > 0 || $("*:contains('Denied')").length > 0 || $("*:contains('rejected')").length > 0 || $("*:contains('Rejected')").length > 0) {
             console.log('default denied detected: Aww :(');
-            decisionn = "Denied\nIt's ok though!";
+            decisionn = "Denied, It's ok though!";
             decisionnColor = "#FF0000";
             deniedRoutine();
         }
         else if ($("*:contains('defer')").length > 0 || $("*:contains('Defer')").length > 0) {
-            console.log("default deferred detected: There's still a chance!");
-            decisionn = "Deferred\nThere's still a chance!";
+            console.log("default deferred detected: Still a chance!");
+            decisionn = "Deferred, Still a chance!";
             decisionnColor = "#FF7300";
             deniedRoutine();
         }
@@ -390,7 +390,7 @@ function checkAccept() {
                         ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('regret') > -1)
                 ) {
                     console.log('iframe denied detected: Aww :(');
-                    decisionn = "Denied\nIt's ok though!";
+                    decisionn = "Denied, It's ok though!";
                     decisionnColor = "#FF0000";
                     deniedRoutine();
                 }
@@ -399,7 +399,7 @@ function checkAccept() {
                         ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('defer') > -1)
                 ) {
                     console.log("iframe deferred detected: There's still a chance!");
-                    decisionn = "Deferred\nThere's still a chance!";
+                    decisionn = "Deferred, Still a chance!";
                     decisionnColor = "#FF7300";
                     deniedRoutine();
                 }
