@@ -89,7 +89,7 @@ function startTheConfetti() {
             var textString = "ACCEPTED!", // collegename.toUpperCase()
                 textWidth = ctx.measureText(textString).width;
 
-            ctx.fillText(textString, (W / 2.8), (H / 2)); // used to be 100 as last
+            ctx.fillText(textString, (W / 3), (H / 2)); // used to be 100 as last
             return ctx.stroke();
         }
     }
