@@ -300,7 +300,7 @@ function startTheDenial() {
         ctx.font = '100px san-serif';
         var textString = decisionn, // collegename.toUpperCase()
             textWidth = ctx.measureText(textString).width;
-        ctx.fillText(textString, (W / 6), (H / 2)); // last one was 100
+        ctx.fillText(textString, (W / 8), (H / 2)); // last one was 100
     }
 
     function RandomFromTo(from, to) {
