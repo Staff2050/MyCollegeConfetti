@@ -88,7 +88,7 @@ function startTheConfetti() {
             var textString = "ACCEPTED!", // collegename.toUpperCase()
                 textWidth = ctx.measureText(textString).width;
 
-            ctx.fillText(textString, (W / 2.5), (H / 2)); // used to be 100 as last
+            ctx.fillText(textString, (W / 3), (H / 2)); // used to be 100 as last
             return ctx.stroke();
         }
     }
@@ -296,11 +296,11 @@ function startTheDenial() {
     }
     
     function DrawMyText() {
-        ctx.fillStyle = "#330000";
-        ctx.font = '160px san-serif';
+        ctx.fillStyle = "#FF0000";
+        ctx.font = '100px san-serif';
         var textString = decisionn, // collegename.toUpperCase()
             textWidth = ctx.measureText(textString).width;
-        ctx.fillText(textString, (W / 2.4), (H / 2)); // last one was 100
+        ctx.fillText(textString, (W / 2.6), (H / 2)); // last one was 100
     }
 
     function RandomFromTo(from, to) {
