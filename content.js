@@ -365,7 +365,7 @@ function checkAccept() {
         }
         else if ($("*:contains('regret')").length > 0 || $("*:contains('denied')").length > 0 || $("*:contains('Denied')").length > 0 || $("*:contains('rejected')").length > 0 || $("*:contains('Rejected')").length > 0) {
             console.log('default denied detected: Aww :(');
-            decisionn = "Denied, it's ok though!";
+            decisionn = "Denied\nIt's ok though!";
             deniedRoutine();
         }
         else if ($("*:contains('defer')").length > 0 || $("*:contains('Defer')").length > 0) {
@@ -388,7 +388,7 @@ function checkAccept() {
                         ($('iframe')[0].contentWindow.document.documentElement.textContent || $('iframe')[0].contentWindow.document.documentElement.innerText).indexOf('regret') > -1)
                 ) {
                     console.log('iframe denied detected: Aww :(');
-                    decisionn = "Denied, it's ok though!";
+                    decisionn = "Denied\nIt's ok though!";
                     decisionnColor = "#FF0000";
                     deniedRoutine();
                 }
